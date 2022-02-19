@@ -19,7 +19,7 @@ import 'package:tele_log_api/home/system.dart';
 import 'package:tele_log_api/home/test.dart';
 
 // dart pub run build_runner build --delete-conflicting-outputs
-// dart compile exe bin/tele_log_api.dart -o bin/server
+// dart compile exe bin/tele_log_api.dart -o bin/server.exe
 
 const bool production = true;
 Future<void> main(List<String> args) async {
