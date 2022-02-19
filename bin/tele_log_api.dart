@@ -14,7 +14,7 @@
 // limitations under the License.
 
 import 'package:functions_framework/serve.dart';
-import 'package:tele_log_api/home/functions.dart' as function_library;
+import 'package:tele_log_api/routers/functions.dart' as function_library;
 import 'package:tele_log_api/home/system.dart';
 import 'package:tele_log_api/home/test.dart';
 
