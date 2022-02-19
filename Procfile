@@ -1,1 +1,1 @@
-web: ./bin/server.exe
+web: ./dart-sdk/bin/dart bin/tele_log_api.dart
