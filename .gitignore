@@ -14,3 +14,4 @@ doc/api/
 
 local/
 bin/server
+.env*

@@ -14,6 +14,7 @@
 // limitations under the License.
 
 import 'package:functions_framework/serve.dart';
+import 'package:tele_log_api/helpers/constants.dart';
 import 'package:tele_log_api/routers/functions.dart' as function_library;
 import 'package:tele_log_api/home/system.dart';
 import 'package:tele_log_api/home/test.dart';
@@ -21,9 +22,10 @@ import 'package:tele_log_api/home/test.dart';
 // dart pub run build_runner build --delete-conflicting-outputs
 // dart compile exe bin/tele_log_api.dart -o bin/server.exe
 
-const bool production = true;
 Future<void> main(List<String> args) async {
   print('Ativando API em modo de ' + (production ? 'produção' : 'teste'));
+  Constants.init();
+
   if (production) {
     system();
     await serve(args, _nameToFunctionTarget);

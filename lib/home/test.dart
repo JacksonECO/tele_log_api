@@ -1,5 +1,4 @@
-bool isTestHaveServer = true;
+const bool isTestHaveServer = false;
+const bool production = true;
 
-Future<void> test() async {
-  print('object');
-}
+Future<void> test() async {}
