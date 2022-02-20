@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:shelf/shelf.dart';
+import 'package:tele_log_api/handler/tele_log/message_long.dart';
 import 'package:tele_log_api/handler/tele_log/telegram.dart';
 import 'package:tele_log_api/helpers/constants.dart';
 
@@ -9,7 +10,7 @@ abstract class TeleLogHandler {
     var body = jsonDecode(await request.readAsString());
     var telegram = Telegram(Constants.teleLogToken, Constants.developChat);
 
-    telegram.send(jsonEncode(body));
+    MessageLong.separation(jsonEncode(body), isJson: true, forEach: telegram.send);
 
     return Response(202);
   }
